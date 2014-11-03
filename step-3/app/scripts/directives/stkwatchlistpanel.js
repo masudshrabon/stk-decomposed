@@ -38,7 +38,6 @@ angular.module('stockDogApp')
           WatchlistService.remove(list);
           $location.path('/');
         };
-        console.log($routeParams);
 
         // Send users to desired watchlist view
         $scope.gotoList = function (listId) {
