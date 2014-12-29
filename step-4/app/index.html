@@ -16,6 +16,7 @@
     <link rel="stylesheet" href="styles/main.css">
     <!-- endbuild -->
   </head>
+  <!-- [1] Load MainCtrl -->
   <body ng-app="stockDogApp" ng-controller="MainCtrl">
     <nav class="navbar navbar-inverse" role="navigation" ng-cloak>
       <div class="container-fluid">
@@ -32,6 +33,7 @@
         <!-- Collect the nav links and other content for toggling -->
         <div class="collapse navbar-collapse" id="main-nav">
           <ul class="nav navbar-nav navbar-right">
+            <!-- [2] Add active class to necessary item -->
             <li ng-class="{active: activeView === 'dashboard'}">
               <a href="/">Dashboard</a>
             </li>
@@ -44,6 +46,7 @@
                 <li ng-if="!watchlists.length" class="dropdown-header">
                   No lists found
                 </li>
+                <!-- [3] Create a unique link for each watchlist -->
                 <li ng-repeat="list in watchlists track by $index">
                   <a href="/#/watchlist/{{list.id}}">{{list.name}}</a>
                 </li>
@@ -66,7 +69,9 @@
     <!-- build:js(.) scripts/vendor.js -->
     <!-- bower:js -->
     <script src="bower_components/jquery/dist/jquery.js"></script>
+    <script src="bower_components/es5-shim/es5-shim.js"></script>
     <script src="bower_components/angular/angular.js"></script>
+    <script src="bower_components/json3/lib/json3.js"></script>
     <script src="bower_components/bootstrap/dist/js/bootstrap.js"></script>
     <script src="bower_components/angular-resource/angular-resource.js"></script>
     <script src="bower_components/angular-cookies/angular-cookies.js"></script>
@@ -86,6 +91,7 @@
         <script src="scripts/directives/stkwatchlistpanel.js"></script>
         <script src="scripts/controllers/dashboard.js"></script>
         <script src="scripts/controllers/watchlist.js"></script>
+        <script src="scripts/controllers/main.js"></script>
         <!-- endbuild -->
 </body>
 </html>
