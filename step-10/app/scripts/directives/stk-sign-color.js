@@ -4,11 +4,8 @@ angular.module('stockDogApp')
   .directive('stkSignColor', function () {
     return {
       restrict: 'A',
-      scope: {
-        signColor: '@'
-      },
-      link: function ($scope, $element) {
-        $scope.$watch('signColor', function (newVal) {
+      link: function ($scope, $element, $attrs) {
+        $scope.$watch($attrs.stkSignColor, function (newVal) {
           var newSign = parseFloat(newVal);
           if (newSign > 0) {
             $element[0].style.color = 'Green';
