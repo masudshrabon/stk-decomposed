@@ -1,6 +1,20 @@
+/* Stock Table Styles */
 .table {
   text-align: center;
   margin-bottom: 5px;
+}
+tfoot {
+  font-weight: bold;
+}
+a {
+  cursor: pointer;
+}
+span[disabled="disabled"] a {
+  text-decoration: none;
+  color: black;
+}
+span[disabled="disabled"] {
+  pointer-events: none;
 }
 
 /* Styles for ngAnimate animations */
@@ -17,12 +31,6 @@
 }
 .change-down-add.change-down-add-active {
   background-color: white;
-}
-
-/* Space out content a bit */
-body {
-  padding-top: 20px;
-  padding-bottom: 20px;
 }
 
 /* Everything but the jumbotron gets side spacing for mobile first views */
