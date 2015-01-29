@@ -13,6 +13,6 @@ angular.module('stockDogApp')
         $scope.activeView = 'watchlist';
       } else {
         $scope.activeView = 'dashboard';
-      }   
-    }); 
-  });                                                                              
+      }
+    });
+  });
