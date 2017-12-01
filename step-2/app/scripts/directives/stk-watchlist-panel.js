@@ -12,7 +12,7 @@ angular.module('stockDogApp')
         $scope.watchlist = {};
         var addListModal = $modal({
           scope: $scope,
-          template: 'views/templates/addlist-modal.html',
+          templateUrl: 'views/templates/addlist-modal.html',
           show: false
         });
 
